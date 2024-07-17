@@ -1,0 +1,13 @@
+<button class="icon-button p-0" data-bs-toggle="dropdown">
+  <span class="material-symbols-rounded"> more_vert </span>
+</button>
+<ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+  @for (button of buttons; track $index) {
+  <li>
+    <a class="dropdown-item d-flex align-items-center" href="#">
+      <span class="material-symbols-rounded me-2">{{ button.icon }}</span
+      >{{ button.label }}</a
+    >
+  </li>
+  }
+</ul>

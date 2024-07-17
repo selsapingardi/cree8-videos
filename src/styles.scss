@@ -1,1 +1,60 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --bg-color: rgba(15, 15, 21, 1);
+  --topbar-color: rgba(20, 20, 26, 1);
+  --button-color: rgba(35, 35, 45, 1);
+  --text-color: rgba(255, 255, 255, 1);
+  --grey-border: 1px solid rgba(157, 162, 179, 0.12);
+
+  --overflow-hover-color: rgba(72, 72, 78, 1);
+  --overflow-active-color: rgba(35, 35, 45, 1);
+  --overflow-border: 1px solid rgba(61, 61, 66, 1);
+
+  --folder-color: rgba(29, 29, 35, 1);
+  --folder-hover-color: rgba(46, 46, 53, 1);
+  --folder-active-color: rgba(35, 35, 45, 1);
+  --folder-border: 1px solid rgba(61, 61, 66, 1);
+
+  --file-color: rgba(26, 26, 31, 1);
+  --file-hover-color: rgba(46, 46, 53, 1);
+  --file-active-color: rgba(35, 35, 45, 1);
+  --file-border: 1px solid rgba(61, 61, 66, 1);
+
+  --overlay-color: rgba(0, 0, 0, 0.6);
+  --overlay-shadow-color: rgba(27, 31, 29, 0.3);
+  --overlay-border: 1px solid rgba(44, 45, 52, 1);
+  --overlay-item-color: rgba(29, 29, 35, 1);
+  --overlay-item-hover: rgba(46, 46, 53, 1);
+
+  --progress-color: rgba(255, 255, 255, 0.4);
+  --progress-bar-color: rgba(102, 17, 245, 1);
+}
+body {
+  font-family: "Inter";
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+.material-symbols-rounded {
+  font-size: 16px;
+  color: var(--text-color);
+}
+.dropdown-menu {
+  box-shadow: 5px 16px 27px 0 var(--overlay-shadow-color);
+  background-color: var(--overlay-item-color);
+  .dropdown-item {
+    height: 46px;
+    opacity: 0.6;
+    background-color: var(--overlay-item-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    transition: 0.2s;
+    &:hover {
+      opacity: 1;
+      background-color: var(--overlay-item-hover);
+    }
+  }
+  li:not(:last-child) .dropdown-item {
+    border-bottom: var(--overlay-border);
+  }
+}

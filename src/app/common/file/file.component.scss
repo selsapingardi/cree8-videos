@@ -1,0 +1,83 @@
+.card-file {
+  width: 204px;
+  height: 175px;
+  background-color: var(--file-color);
+  border-radius: 10px;
+  border: var(--file-border);
+  cursor: pointer;
+  transition: 0.3s ease-out;
+  &:hover {
+    background-color: var(--file-hover-color);
+    .card-overlay {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    .duration-text {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    .progress {
+      opacity: 1;
+    }
+  }
+  &:active {
+    background-color: var(--folder-active-color);
+  }
+  .card-overlay.d-grid {
+    transition: 0.3s ease-out;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    span {
+      border-radius: 4px;
+      padding: 8px;
+      background-color: var(--overlay-color);
+      &.overlay-chip-text {
+        color: var(--text-color);
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 10px;
+      }
+      &.overlay-chip-icon {
+        display: flex;
+        justify-content: center;
+        font-size: 18px;
+        line-height: 10px;
+      }
+    }
+  }
+  .duration-text {
+    transition: 0.3s ease-out;
+    opacity: 0;
+    color: var(--text-color);
+    font-size: 10px;
+    line-height: 10px;
+    font-weight: 700;
+    transform: translateY(-20px);
+  }
+  img {
+    height: 120px;
+  }
+  .progress {
+    transition: 0.3s ease-out;
+    opacity: 0;
+    background-color: var(--progress-color);
+    .progress-bar {
+      background-color: var(--progress-bar-color);
+    }
+  }
+  .card-body.d-grid {
+    gap: 6px;
+    .file-title {
+      color: var(--text-color);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 14px;
+    }
+    .file-subtitle {
+      color: var(--text-color);
+      font-size: 12px;
+      line-height: 14.52px;
+      opacity: 0.5;
+    }
+  }
+}

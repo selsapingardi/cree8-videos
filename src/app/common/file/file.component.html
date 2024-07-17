@@ -1,0 +1,23 @@
+<div class="card card-file">
+  <div
+    class="card-overlay position-absolute top-0 start-0 p-2 d-grid align-items-center"
+  >
+    <span class="overlay-chip-text">MP4</span>
+    <span class="overlay-chip-icon material-symbols-rounded">star</span>
+  </div>
+  <div class="position-absolute top-0 start-0 p-3 duration-text">1:30</div>
+  <div class="position-absolute top-0 end-0 p-2">
+    <app-overflow-button></app-overflow-button>
+  </div>
+  <img
+    src="https://picsum.photos/204/120?random={{ album.id }}"
+    class="card-img-top"
+  />
+  <div class="progress" role="progressbar" style="height: 4px">
+    <div class="progress-bar" style="width: 50%"></div>
+  </div>
+  <div class="card-body p-2 d-grid">
+    <p class="file-title mb-0">{{ album.title | titlecase | truncate }}</p>
+    <p class="file-subtitle mb-0">{{ album.name }} • 200MB</p>
+  </div>
+</div>

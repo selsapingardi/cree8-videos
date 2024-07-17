@@ -1,0 +1,23 @@
+<div class="card card-folder">
+  <div class="card-body">
+    <div class="row">
+      <div class="col d-grid">
+        @if (post.id <= 2) {
+        <span class="material-symbols-rounded">star</span>
+
+        } @else {
+        <span class="material-symbols-rounded">folder</span>
+        }
+        <div class="d-grid">
+          <p class="folder-title mb-0">
+            {{ post.title | titlecase | truncate : 10 }}
+          </p>
+          <p class="folder-subtitle mb-0">Shared folder • 1.2 GB</p>
+        </div>
+      </div>
+      <div class="col-auto ps-0">
+        <app-overflow-button></app-overflow-button>
+      </div>
+    </div>
+  </div>
+</div>
